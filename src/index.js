@@ -1,11 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router } from './router'
+import { GlobalStyle } from './assets/css/global.styles'
 
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
-  <Router />, 
+  <React.Fragment>
+    <GlobalStyle />
+    <Router />
+  </React.Fragment>, 
   document.getElementById('root')
 )
 
