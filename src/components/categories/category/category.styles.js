@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Card as CardReactstrap } from 'reactstrap'
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -16,17 +17,10 @@ export const Text = styled.span`
   font-weight: bold;
 `
 
-export const Box = styled.div`
-  border-style: solid;
-  border-width: 0.1rem;
-  border-color: #80808014;
-  border-width: 1px;
+export const Box = styled(CardReactstrap)`
   padding: 10px;
-  width: 400px;
+  width: 300px;
   background: white;
-  -webkit-box-shadow: -0.5px 1px 5px 0px rgba(0,0,0,0.57);
-  -moz-box-shadow: -0.5px 1px 5px 0px rgba(0,0,0,0.57);
-  box-shadow: -0.5px 1px 5px 0px rgba(0,0,0,0.57);
 `
 
 export const Options = styled.div`
@@ -35,6 +29,7 @@ export const Options = styled.div`
 
 export const Item = styled.div`
   margin-bottom: 5px;
+  padding-left: 30px;
 `
 
 export const Label = styled.label`

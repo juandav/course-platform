@@ -1,4 +1,5 @@
 import React from 'react'
+import { Label, Input } from 'reactstrap'
 import { 
   CheckboxContainer, 
   HiddenCheckbox, 
@@ -17,3 +18,9 @@ export const Checkbox = ({ className, checked, ...props }) => (
   </CheckboxContainer>
 )
 
+export const RadioButton = ({ checked, text="nothing" }) => (
+  <Label check>
+    <Input type="radio" checked={checked} />
+    <span>{text}</span>
+  </Label>
+)

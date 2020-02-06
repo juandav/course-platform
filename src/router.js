@@ -1,9 +1,9 @@
 import React from 'react'
 import { Router as Routes } from "@reach/router"
-import { Courses } from './pages/courses'
+import { CoursesPage } from './pages/courses'
 
 export const Router = () => (
   <Routes>
-    <Courses path="/" />
+    <CoursesPage path="/" />
   </Routes>
 )

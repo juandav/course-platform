@@ -1,11 +1,16 @@
 import React, { Fragment } from 'react'
-// import Course from '../components/course'
-import Category from '../components/category'
+import { Container } from '../assets/css/course-page.styles'
+import Categories from '../components/categories'
+import Courses from '../components/courses'
 
-export const Courses = () => (
+import Search from '../components/search'
+
+export const CoursesPage = () => (
   <Fragment>
-    <Category />
+    <Search />
+    <Container>
+      <Categories />
+      <Courses />
+    </Container>
   </Fragment>
 )
-
-// <Course image="https://miro.medium.com/max/3000/1*AmH9hMcmzdHxE6W_PrDjZw.png" />

@@ -5,8 +5,9 @@ export const Course = styled.div`
   justify-content: space-between;
   border-style: solid;
   border-width: 1px;
-  padding: 0.2rem;
+  padding: 0.8rem;
   border-color: #cacaca;
+  background: white;
 `
 
 export const Photo = styled.figure`
@@ -46,6 +47,8 @@ export const Price = styled.div`
 
 export const Title = styled.h3`
   margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
 `
 
 export const Tag = styled.span`
@@ -61,6 +64,7 @@ export const Tag = styled.span`
 export const Type = styled.p`
   margin-top: 10px;
   color: #606060;
+  font-size: 12px;
 `
 
 export const Icon = styled.div`
@@ -76,4 +80,5 @@ export const Icon = styled.div`
 
 export const Footer = styled.h4`
   padding-top: 50px;
+  font-size: 18px;
 `

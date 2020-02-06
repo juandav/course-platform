@@ -32,7 +32,7 @@ export const Course = ({ image }) => (
       </Footer>
     </Content>
     <Price>
-      <h3>$24</h3>
+      <h4>$24</h4>
       <Icon>
         <TiArrowForward size={24} color="#AEABAB" /> 
       </Icon>

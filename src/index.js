@@ -1,14 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import initStore from './store/make-store'
 import { Router } from './router'
 import { GlobalStyle } from './assets/css/global.styles'
 
 import * as serviceWorker from './serviceWorker'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+const store = initStore({})
 
 ReactDOM.render(
   <React.Fragment>
     <GlobalStyle />
-    <Router />
+    <Provider store={store}>
+      <Router />
+    </Provider>
   </React.Fragment>, 
   document.getElementById('root')
 )
