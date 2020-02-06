@@ -1,3 +1,3 @@
-import { Courses } from './courses.component'
+import Courses from './courses.container'
 
 export default Courses

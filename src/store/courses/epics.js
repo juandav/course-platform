@@ -14,7 +14,7 @@ import {
   import { API_URL } from '../../constants/meta'
   
   const getOptions = options => ({
-    url: API_URL,
+    url: API_URL(options),
     method: 'GET'
   })
   

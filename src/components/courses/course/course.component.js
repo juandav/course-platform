@@ -9,17 +9,22 @@ import {
   Title, Tag, Type, Icon, Footer
 } from './course.styles'
 
-export const Course = ({ image }) => ( 
+export const Course = ({ 
+  image, 
+  name, 
+  price, 
+  deliveryMethod 
+}) => ( 
   <CourseWrapper>
     {
       image && (
         <Photo>
-          <img width="200px" height="120px" alt="pictures" src={image} />
+          <img width="200px" height="120px" alt="pictures" src={`https://test.storage.cebroker.com/cebroker/${image}`} />
         </Photo>
       )
     }
     <Content>
-      <Title> Preventing Medical Errors For Physicians - Florida Requirement </Title>
+      <Title> {name} </Title>
       <Tag> FEATURED </Tag>
       <Type>ONCOURSE LEARNING</Type>
       <Footer>
@@ -27,12 +32,12 @@ export const Course = ({ image }) => (
           <FaRegClock /> 2 Hours
         </span>
         <span>
-          <FaLaptopCode /> Computed-Based Training
+          <FaLaptopCode /> {deliveryMethod}
         </span> 
       </Footer>
     </Content>
     <Price>
-      <h4>$24</h4>
+      <h4>{`$${price}`}</h4>
       <Icon>
         <TiArrowForward size={24} color="#AEABAB" /> 
       </Icon>

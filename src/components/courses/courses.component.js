@@ -2,8 +2,15 @@ import React from 'react'
 import Course from './course'
 import { List } from './courses.styles'
 
-export const Courses = () => (
+export const Courses = ({ data }) => (
   <List>
-    <Course image="https://miro.medium.com/max/3000/1*AmH9hMcmzdHxE6W_PrDjZw.png" />
+    {data.map(item => (
+      <Course 
+        name={item.course.name} 
+        image={item.course.featuredBanner} 
+        price={item.price}
+        deliveryMethod={item.course.deliveryMethod.description}
+      />
+    ))}
   </List>
 )

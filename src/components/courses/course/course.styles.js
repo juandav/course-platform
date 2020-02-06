@@ -8,6 +8,7 @@ export const Course = styled.div`
   padding: 0.8rem;
   border-color: #cacaca;
   background: white;
+  margin-bottom: 5px;
 `
 
 export const Photo = styled.figure`

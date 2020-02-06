@@ -8,6 +8,17 @@ export const List = styled.div`
   border-style: solid;
   border-color: #e6e3e3;
   margin-left: 10px;
-  margin-right: 10px;
   margin-bottom: 100px;
+
+  @media screen and (min-width: 360px) {
+    width: 200px;
+  }
+
+  @media screen and (min-width: 680px) {
+    width: 600px
+  } 
+
+  @media screen and (min-width: 1080px) {
+    width: 980px;
+  }
 ` 

@@ -14,7 +14,7 @@ const getCourseError = (state, error) => ({ ...state, error })
 const setCourseloading = (state, { payload: loading }) => ({ ...state, loading })
 
 export default handleActions({
-  [types.GET_PLAYLIST_SUCCESS]: getCourseSuccess,
-  [types.GET_PLAYLIST_ERROR]: getCourseError,
-  [types.GET_PLAYLIST_LOADING]: setCourseloading
+  [types.GET_COURSES_SUCCESS]: getCourseSuccess,
+  [types.GET_COURSES_ERROR]: getCourseError,
+  [types.GET_COURSES_LOADING]: setCourseloading
 }, INITIAL_STATE)
