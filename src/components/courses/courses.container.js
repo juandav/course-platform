@@ -7,10 +7,8 @@ const CoursesContainer = ({
   data,
   fetchCourses
 }) => {
-
   useEffect(
     () => {
-
       fetchCourses({
         expand: 'totalItems',
         pageIndex: 1,
@@ -21,9 +19,8 @@ const CoursesContainer = ({
         courseType: 'CD_ANYTIME',
         isFeatured: true
       })
-
     },
-    [fetchCourses],
+    [fetchCourses]
   )
 
   return (
@@ -32,7 +29,7 @@ const CoursesContainer = ({
 }
 
 const mapStateToProps = ({
-  courses: { data },
+  courses: { data }
 }) => ({
   data
 })

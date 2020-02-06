@@ -1,0 +1,11 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "./node_modules/standard/eslintrc.json", 
+    "plugin:json/recommended"
+  ],
+  "env": {
+    "node": true,
+    "jest": true
+  }
+}
