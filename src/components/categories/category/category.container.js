@@ -5,11 +5,11 @@ import { Category } from './category.component'
 const mapStateToProps = ({
   meta: { sections }
 }) => ({
-  sections,
+  sections
 })
 
-const mapDispatchToProps = ({ 
-  toggleCategorySection 
+const mapDispatchToProps = ({
+  toggleCategorySection
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Category)

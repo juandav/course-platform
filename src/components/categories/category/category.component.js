@@ -2,8 +2,8 @@ import React from 'react'
 import RadioButton from './checkbox'
 import { FaAngleUp } from 'react-icons/fa'
 import { SECTIONS } from '../../../constants/meta'
-import { 
-  Box, 
+import {
+  Box,
   Item,
   HeaderContainer,
   Title,
@@ -19,16 +19,16 @@ export const Category = ({
   <Box id={SECTIONS[index]}>
     <HeaderContainer>
       <Title>{title}</Title>
-      <FaAngleUp 
-        size={20} 
-        onClick={() => toggleCategorySection(SECTIONS[index])} 
+      <FaAngleUp
+        size={20}
+        onClick={() => toggleCategorySection(SECTIONS[index])}
       />
     </HeaderContainer>
-    
+
     <Options>
       {options.map(el => (
-        <Item>
-          <RadioButton 
+        <Item key={el}>
+          <RadioButton
             checked={false}
             text={el}
           />

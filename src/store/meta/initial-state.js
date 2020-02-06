@@ -1,8 +1,8 @@
 import { SECTIONS } from '../../constants/meta'
 
 const getInitialSections = () => {
-  let obj = {}
-  SECTIONS.forEach(item => obj[item] = false)
+  var obj = {}
+  SECTIONS.forEach(item => (obj[item] = false))
   return obj
 }
 

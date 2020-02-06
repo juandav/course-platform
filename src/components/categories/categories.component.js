@@ -10,33 +10,33 @@ export const Categories = () => (
         <Text>Filter Course Results</Text>
       </Title>
     </Card>
-    <Category 
-      index={0} 
-      title="Course Type" 
+    <Category
+      index={0}
+      title='Course Type'
       options={[
-        "Self Placed", 
-        "Live"
-      ]} 
+        'Self Placed',
+        'Live'
+      ]}
     />
-    <Category 
-      index={1} 
-      title="Delivery Type" 
+    <Category
+      index={1}
+      title='Delivery Type'
       options={[
-        "Any delivery type", 
-        "Computer-Based Training", 
-        "Correspondence", 
-        "Mailed Material"
-      ]} 
+        'Any delivery type',
+        'Computer-Based Training',
+        'Correspondence',
+        'Mailed Material'
+      ]}
     />
-    <Category 
-      index={2} 
-      title="Subject Area"
+    <Category
+      index={2}
+      title='Subject Area'
       options={[
-        "Any subject area",
-        "HIV/AIDS",
-        "End-of-Life and Palliative Health Care",
-        "Domestic Violence"
-      ]} 
+        'Any subject area',
+        'HIV/AIDS',
+        'End-of-Life and Palliative Health Care',
+        'Domestic Violence'
+      ]}
     />
-  </ Container>
+  </Container>
 )

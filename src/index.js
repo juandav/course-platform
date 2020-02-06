@@ -11,12 +11,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const store = initStore({})
 
 ReactDOM.render(
-  <React.Fragment>
+  <>
     <GlobalStyle />
     <Provider store={store}>
       <Router />
     </Provider>
-  </React.Fragment>, 
+  </>,
   document.getElementById('root')
 )
 
