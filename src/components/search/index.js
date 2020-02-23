@@ -1,3 +1,3 @@
-import { Search } from './search.component'
+import SearchContainer from './search.container'
 
-export default Search
+export default SearchContainer

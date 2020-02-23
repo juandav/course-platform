@@ -1,22 +1,46 @@
 import styled from 'styled-components'
-import { Button as ButtonReactstrap } from 'reactstrap'
+import { Button as ButtonReactstrap, Label } from 'reactstrap'
+
+export const ComboContainer = styled.div`
+  display: flex;
+`
+
+export const ComboTitle = styled.h4`
+  padding-top: 45px;
+  color: white;
+`
+
+export const ComboBox = styled.div`
+  padding: 10px;
+  text-align: center;
+`
+
+export const ComboLabel = styled(Label)`
+  color: white;
+  height: 10px;
+`
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
   background-color: #1a5796;
-  /*position: absolute;*/
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 214px;
-  justify-content: center;
-  text-align: center;
+`
 
+export const SearchBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   @media screen and (max-width: 360px) {
     flex-direction: column;
   }
 `
 
-export const SearchContainer = styled.span`
+export const Search = styled.span`
   display: inline-block;
   position: relative;
   text-align: start;
