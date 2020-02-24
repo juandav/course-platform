@@ -1,3 +1,3 @@
-import { Categories } from './categories.component'
+import CategoriesContainer from './categories.container'
 
-export default Categories
+export default CategoriesContainer

@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { SearchSection } from './search.component'
 import { getLocations, selectLocation } from '../../store/locations/actions'
 import { getProfessions, selectProfession } from '../../store/professions/actions'
+import { getFilters } from '../../store/filters/actions'
+import { fetchCourses } from '../../store/courses/actions'
 
 const SearchContainer = ({
   locations,
@@ -13,7 +15,10 @@ const SearchContainer = ({
   getProfessions,
   professionsData,
   professionsLoading,
-  selectProfession
+  proessionSelected,
+  selectProfession,
+  getFilters,
+  fetchCourses
 }) => {
   useEffect(() => {
     getLocations({ query: {} })
@@ -29,6 +34,9 @@ const SearchContainer = ({
       professionsData={professionsData}
       professionsLoading={professionsLoading}
       handleSelectProfession={selectProfession}
+      proessionSelected={proessionSelected}
+      handleGetFilters={getFilters}
+      handleFetchCourses={fetchCourses}
     />
   )
 }
@@ -41,20 +49,24 @@ const mapStateToProps = ({
   },
   professions: {
     data: professionsData,
-    loading: professionsLoading
+    loading: professionsLoading,
+    selected: proessionSelected
   }
 }) => ({
   locations,
   locationLoading,
   locationSelected,
   professionsData,
-  professionsLoading
+  professionsLoading,
+  proessionSelected
 })
 const mapDispatchToProps = ({
   getLocations,
   selectLocation,
   getProfessions,
-  selectProfession
+  selectProfession,
+  getFilters,
+  fetchCourses
 })
 export default connect(
   mapStateToProps,

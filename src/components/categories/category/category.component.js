@@ -26,11 +26,12 @@ export const Category = ({
     </HeaderContainer>
 
     <Options>
-      {options.map(el => (
-        <Item key={el}>
+      {options.map(item => (
+        <Item key={item.code}>
           <RadioButton
             checked={false}
-            text={el}
+            code={item.code}
+            text={item.description || item.name}
           />
         </Item>
       ))}

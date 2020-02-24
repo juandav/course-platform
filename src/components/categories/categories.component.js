@@ -2,7 +2,11 @@ import React from 'react'
 import Category from './category'
 import { Container, Card, Title, Text, FilterListIcon } from './categories.styles'
 
-export const Categories = () => (
+export const Categories = ({
+  courseTypes,
+  deliveryMethods,
+  subjectArea
+}) => (
   <Container>
     <Card>
       <Title>
@@ -13,30 +17,17 @@ export const Categories = () => (
     <Category
       index={0}
       title='Course Type'
-      options={[
-        'Self Placed',
-        'Live'
-      ]}
+      options={courseTypes.items}
     />
     <Category
       index={1}
       title='Delivery Type'
-      options={[
-        'Any delivery type',
-        'Computer-Based Training',
-        'Correspondence',
-        'Mailed Material'
-      ]}
+      options={deliveryMethods.items}
     />
     <Category
       index={2}
       title='Subject Area'
-      options={[
-        'Any subject area',
-        'HIV/AIDS',
-        'End-of-Life and Palliative Health Care',
-        'Domestic Violence'
-      ]}
+      options={subjectArea.items}
     />
   </Container>
 )

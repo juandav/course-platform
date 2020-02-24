@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 import { Label as LabelReactstrap } from 'reactstrap'
+import { FaArchive } from 'react-icons/fa'
+
+export const EmptyIcon = styled(FaArchive)`
+
+`
 
 export const Container = styled.div`
   min-width: 0;

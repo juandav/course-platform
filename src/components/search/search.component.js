@@ -13,6 +13,7 @@ import {
   SearchInput,
   Button
 } from './search.styles'
+import { getAsyncFilters } from '../categories/categories.filters'
 
 export const SearchSection = ({
   locations = [],
@@ -22,7 +23,9 @@ export const SearchSection = ({
   handleGetProfessions,
   professionsData,
   professionsLoading,
-  handleSelectProfession
+  handleSelectProfession,
+  handleGetFilters,
+  handleFetchCourses
 }) => (
   <Container>
     <ComboContainer>
@@ -58,7 +61,10 @@ export const SearchSection = ({
           type='select'
           name='select'
           id='professions'
-          onChange={event => handleSelectProfession(event.target.value)}
+          onChange={event => {
+            handleSelectProfession(event.target.value)
+            handleGetFilters(getAsyncFilters(event.target.value))
+          }}
           disabled={locationSelected === '' || professionsLoading || !(professionsData.length > 0)}
         >
           <option key='defaultProfessions' value='NA'>Please select a professions</option>
@@ -73,7 +79,15 @@ export const SearchSection = ({
         </SearchIcon>
         <SearchInput type='text' placeholder='Search courses' />
       </Search>
-      <Button color='info'> Find Courses</Button>
+      <Button
+        color='info'
+        onClick={() =>
+          handleFetchCourses({
+            path: '/offerings',
+            query: {}
+          })}
+      > Find Courses
+      </Button>
     </SearchBox>
   </Container>
 )
