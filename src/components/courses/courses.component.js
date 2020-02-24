@@ -63,7 +63,7 @@ export const Courses = ({
           })
         }}
       >
-        DADAD
+        View more
       </ViewMoreButton>
     </ViewMoreContainer>
   </Container>
