@@ -15,6 +15,7 @@ import { API_URL } from '../constants/meta'
  * @param {String} type TYPE
  * @param {String} path /offering
  * @param {Object} actions [ loading, success, error ]
+ * @param {Function} triggers payload => [ otherActionOne, otherActionTwo, OtherActionN, .......]
  * @param {Array} blockers [........]
  * @param {Number} delay 1500
  */
@@ -22,6 +23,7 @@ export const EpicFactory = (
   type,
   path,
   actions,
+  triggers,
   blockers = [],
   delay = 1500
 ) => action$ => {
@@ -41,6 +43,7 @@ export const EpicFactory = (
           takeUntil(interrupts),
           mergeMap(response => of(
             loading(false),
+            ...(typeof triggers === 'function' ? triggers(payload) : []),
             success(response)
           )),
           catchError(err => of(

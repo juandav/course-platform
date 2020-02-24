@@ -5,25 +5,43 @@ import { fetchCourses } from '../../store/courses/actions'
 
 const CoursesContainer = ({
   data,
-  sortField
+  sortField,
+  fetchCourses,
+  profession,
+  expand,
+  pageIndex,
+  pageSize
 }) => {
   const Component = (
     <CoursesComponent
       data={data}
       sortField={sortField}
+      handleFetchCourses={fetchCourses}
+      profession={profession}
+      expand={expand}
+      pageIndex={pageIndex}
+      pageSize={pageSize}
     />
   )
-
-  console.log(!(data.lenght > 0))
   return Component
 }
 
 const mapStateToProps = ({
-  courses: { data },
-  filters: { sortField }
+  courses: {
+    data,
+    expand,
+    pageIndex,
+    pageSize
+  },
+  filters: { sortField },
+  professions: { selected: profession }
 }) => ({
   data,
-  sortField
+  sortField,
+  profession,
+  expand,
+  pageIndex,
+  pageSize
 })
 const mapDispatchToProps = ({ fetchCourses })
 

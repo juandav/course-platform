@@ -15,10 +15,13 @@ const SearchContainer = ({
   getProfessions,
   professionsData,
   professionsLoading,
-  proessionSelected,
+  profession,
   selectProfession,
   getFilters,
-  fetchCourses
+  fetchCourses,
+  expand,
+  pageIndex,
+  pageSize
 }) => {
   useEffect(() => {
     getLocations({ query: {} })
@@ -34,9 +37,12 @@ const SearchContainer = ({
       professionsData={professionsData}
       professionsLoading={professionsLoading}
       handleSelectProfession={selectProfession}
-      proessionSelected={proessionSelected}
+      profession={profession}
       handleGetFilters={getFilters}
       handleFetchCourses={fetchCourses}
+      expand={expand}
+      pageIndex={pageIndex}
+      pageSize={pageSize}
     />
   )
 }
@@ -50,7 +56,12 @@ const mapStateToProps = ({
   professions: {
     data: professionsData,
     loading: professionsLoading,
-    selected: proessionSelected
+    selected: profession
+  },
+  courses: {
+    expand,
+    pageIndex,
+    pageSize
   }
 }) => ({
   locations,
@@ -58,7 +69,10 @@ const mapStateToProps = ({
   locationSelected,
   professionsData,
   professionsLoading,
-  proessionSelected
+  profession,
+  expand,
+  pageIndex,
+  pageSize
 })
 const mapDispatchToProps = ({
   getLocations,

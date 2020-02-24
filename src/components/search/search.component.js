@@ -23,9 +23,13 @@ export const SearchSection = ({
   handleGetProfessions,
   professionsData,
   professionsLoading,
+  profession,
   handleSelectProfession,
   handleGetFilters,
-  handleFetchCourses
+  handleFetchCourses,
+  expand,
+  pageIndex,
+  pageSize
 }) => (
   <Container>
     <ComboContainer>
@@ -84,7 +88,13 @@ export const SearchSection = ({
         onClick={() =>
           handleFetchCourses({
             path: '/offerings',
-            query: {}
+            query: {
+              expand,
+              pageIndex,
+              pageSize,
+              profession
+            },
+            type: 'new'
           })}
       > Find Courses
       </Button>

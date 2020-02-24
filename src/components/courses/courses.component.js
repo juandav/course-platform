@@ -7,12 +7,19 @@ import {
   ComboBox,
   Label,
   List,
-  EmptyIcon
+  EmptyIcon,
+  ViewMoreContainer,
+  ViewMoreButton
 } from './courses.styles'
 
 export const Courses = ({
   data,
-  sortField = []
+  sortField = [],
+  handleFetchCourses,
+  profession,
+  expand,
+  pageIndex,
+  pageSize
 }) => (
   <Container>
     {(data.lenght > 0)
@@ -42,6 +49,22 @@ export const Courses = ({
           </List>
         </>
       )}
-
+    <ViewMoreContainer>
+      <ViewMoreButton
+        onClick={() => {
+          handleFetchCourses({
+            query: {
+              expand,
+              pageIndex,
+              pageSize,
+              profession
+            },
+            type: 'more'
+          })
+        }}
+      >
+        DADAD
+      </ViewMoreButton>
+    </ViewMoreContainer>
   </Container>
 )

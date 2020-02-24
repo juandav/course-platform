@@ -13,7 +13,7 @@ const CategoriesContainer = ({
 }) => {
   useEffect(() => {
     getFilters(getAsyncFilters(selected))
-  }, [getFilters])
+  }, [getFilters, selected])
   return (
     <Categories
       courseTypes={courseTypes}

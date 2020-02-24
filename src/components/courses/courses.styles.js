@@ -1,10 +1,8 @@
 import styled from 'styled-components'
-import { Label as LabelReactstrap } from 'reactstrap'
+import { Label as LabelReactstrap, Button } from 'reactstrap'
 import { FaArchive } from 'react-icons/fa'
 
-export const EmptyIcon = styled(FaArchive)`
-
-`
+export const EmptyIcon = styled(FaArchive)``
 
 export const Container = styled.div`
   min-width: 0;
@@ -49,3 +47,10 @@ export const SortSection = styled.div`
 export const List = styled.div`
   margin-top: 40px;
 `
+
+export const ViewMoreContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+export const ViewMoreButton = styled(Button)``
