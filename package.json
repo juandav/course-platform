@@ -22,7 +22,7 @@
     "redux-devtools-extension": "2.13.8",
     "redux-logger": "3.0.6",
     "redux-observable": "1.2.0",
-    "rxjs": "6.5.4",
+    "rxjs": "6.6.7",
     "styled-components": "5.0.1",
     "universal-rxjs-ajax": "2.0.3"
   },
